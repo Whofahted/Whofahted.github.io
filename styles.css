@@ -1,0 +1,77 @@
+/* Global Styles */
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+    font-family: Broadway;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Clock Container Styles */
+.clock-container {
+    text-align: center;
+    margin: 5px;
+    font-family: Stencil;
+    width: calc(25% - 20px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Clock Styles */
+.clock {
+    font-size: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 150px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Clock Text Styles */
+.clock-text {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    text-align: center;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.clock-container:hover .clock {
+    opacity: 1;
+}
+
+.clock-container:hover .clock-text {
+    opacity: 0;
+}
+
+/* Initial Opacity for Clock and Clock Text */
+.clock-container .clock,
+.clock-container .clock-text {
+    opacity: 1;
+}
+
+/* Z-index for Clock Text */
+.clock-text {
+    z-index: 1;
+}
